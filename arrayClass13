@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arrays</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var name = 'Bobby';
+			var footballTeams = ['Giants', 'RoughRiders', 'Jets', name];
+			console.log(footballTeams);
+			console.log('The 2nd element in the array is ' + footballTeams[2]);
+			footballTeams[0] = 'RedSkins';
+			console.log('The 1st element in the array is now ' + footballTeams[0]);
+
+			var iphones = ['6', '6s', '7', '8', 'x'];
+			var samsungs = ['s6', 's6 edge', 's7', 's7 edge', 's8'];
+			console.log('iPhone ' + iphones[1] + ' is better than Samsung ' + samsungs[1]);
+
+
+
+
+
+
+		</script>
+
+
+
+	</body>
+</html>

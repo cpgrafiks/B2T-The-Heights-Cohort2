@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Pig Latin</title>
+	</head>
+
+
+
+	<body>
+		
+
+		<h1 id="text"></h1>
+
+		<script type="text/javascript">
+			//java
+			//avajay
+			//get first char of str and move it to the end of th str
+				//get first char of str
+				//get the str w/o first letter
+				//move first char behind str 
+			//add 'ay' to the end of the str
+			//display on webpage
+
+			var word = prompt();
+			var piglatin = word.slice(1, word.length) + word.charAt(0) + 'ay';
+			document.getElementById('text').innerHTML = ("Pig Latin = ") + piglatin;
+		
+		//var str = str.slice(1, str.length + charAt - 1) + 'ay';
+		
+	
+		//document.getElementById("pigLatin").innerHTML= ("Enter a word " + word);
+
+
+		</script>
+
+
+
+
+
+
+	</body>
+	</html>
