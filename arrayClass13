@@ -13,10 +13,52 @@
 			footballTeams[0] = 'RedSkins';
 			console.log('The 1st element in the array is now ' + footballTeams[0]);
 
+			console.log('The amount of elements in the array is ' + footballTeams.length);
+			console.log(footballTeams.toString());
+			console.log('These are all the football teams: ' + footballTeams.join(' - '));
+
+			//pushing 'Cardinals'
+			footballTeams.push('Cardinals');
+			console.log(footballTeams);
+			//popping 'Cardinals'
+			var removedElement = footballTeams.pop();
+			console.log(removedElement + ' was removed from the array.');
+
+			var input = prompt();
+			footballTeams.push(input);
+			console.log(footballTeams);
+
+			//add two new elements after the first element of array and remove 2nd element of array
+			footballTeams.splice(1, 1, 'Falcons', 'Cowboy');
+			console.log(footballTeams);
+
+			//splice
+			var dog = ['pits', 'sheperds', 'snoop', 'clifford'];
+			dog.splice(2, 0, 'scooby');
+			console.log(dog);
+
+			//unshift
+			dog.unshift('poodle');
+			dog.splice(dog.length/2, 0, 'stuffed');
+			console.log(dog);
+
+			//sort
+			var letters = ['a', 'b', 'c', 'B'];
+			letters.sort();
+			console.log(letters);
+
+			//reverse ordering in descending order
+			
+
+
+
+
+
+			/*
 			var iphones = ['6', '6s', '7', '8', 'x'];
 			var samsungs = ['s6', 's6 edge', 's7', 's7 edge', 's8'];
 			console.log('iPhone ' + iphones[1] + ' is better than Samsung ' + samsungs[1]);
-
+			*/
 
 
 

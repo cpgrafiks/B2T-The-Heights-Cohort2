@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arrays and DOMS</title>
+	</head>
+
+	<body>
+
+		<h1 id="text"></h1>
+
+
+
+
+		<script type="text/javascript">
+			//prompt - add more fruit
+			//add an element to end of array, push
+			//sort elements
+			//display elements using "with"
+
+			var fruits = ['apple', 'orange', 'kiwi'];
+			var input = prompt('Add more fruit:');
+			fruits.push(input)
+			fruits.sort();
+			console.log(fruits);
+
+			document.getElementById("text").innerHTML= ('Adding more fruit: ' + fruits.join(' with '));
+
+			
+
+
+
+
+
+
+
+
+
+		</script>
+
+
+
+	</body>
+</html>
