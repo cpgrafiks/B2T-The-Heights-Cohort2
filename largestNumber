@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LARGEST NUMBER ASSIGNMENT/title>
+	</head>
+
+	<body>
+
+		<h1 id="text"></h1>
+
+		<script type="text/javascript">
+			
+			var x1 = parseInt(prompt('Enter a number:'));
+			var x2 = parseInt(prompt('Enter a 2nd number:'));
+			var x3 = parseInt(prompt('Enter a 3rd number:'));
+
+
+			if(x1 > x2 && x1 > x3){
+				console.log(x1 + ' is the largest number');
+				document.getElementById('text').innerHTML = x1 + ' is the largest number';
+			}
+			else if(x2 > x3){
+				console.log(x2 + ' is the lasrgest number');
+				document.getElementById('text').innerHTML = x2 + ' is the largest number';
+			}
+			else{
+				console.log(x3 + ' is the largest number');
+				document.getElementById('text').innerHTML = x3 + ' is the largest number';
+			}
+		
+
+
+		</script>
+
+
+
+	</body>
+</html>
