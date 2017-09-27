@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class 17 - Objects</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		//curly brackets by itself is ALWAYS an object
+		var baby = {
+			name: 'Phyllis',
+			age: 2,
+			favFoods: ['carrots', 'peas', 'fish'],
+			cry: function(){
+				console.log('WWAHHH');
+			}
+
+		};
+
+		console.log("The baby's name is " + baby.name);
+		console.log("The baby's age is " + baby.age);
+		console.log("The baby's fave food is " + baby.favFoods.join(' and '));
+		baby.cry();
+
+		var people = [
+			{name: 'Tyrone', height: 6},
+			{name: 'Jill', height: 5.2},
+			{name: 'Erica', height: 5.7},
+			{name: 'Pedro', height: 6.6},
+			{name: 'Osama', height: 4},
+		];
+
+		//find the avg of their heights
+		//find sum of peoples heights
+		// divide by number of people
+
+		var total = 0;
+		for(var i = 0; i < people.length; i++){
+			total += people[i].height;
+		}
+		var average = total / people.length;
+		console.log('The average height of people is ' + average);
+
+	</script>	
+
+
+
+
+
+</body>
+</html>

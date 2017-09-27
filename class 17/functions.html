@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class 17 - Functions</title>
+</head>
+
+
+<body onload="fruitsPush()">
+
+	<input type="button" value="Click Me!" onclick="clickButton()">
+	<input id="name" type="text" onchange="dislayName()">
+	<input type="button" value="Display Name" onclick="displayName()">
+	<h4 id="display"></h4>
+	<input type="button" value="Add more fruit" onclick="fruitsPush()">
+
+	<script type="text/javascript">
+
+
+
+		var fruits = ['apple', 'mango', 'banana'];
+		function fruitsPush(){
+			fruits.push(prompt('Enter fruits').toLowerCase());
+			fruits.sort();
+			document.getElementById('display').innerHTML = fruits.join(' with ');
+		}
+
+		/*function sayHello(name, age){
+			console.log('Hello ' + name + ', you are ' + age);
+		}
+		sayHello('Trey', 54);
+		sayHello('Jim', 89);
+		sayHello('Sue', 14);
+		sayHello(prompt('Enter Name'), prompt('Enter Age'));
+
+
+		//do not use this method of creating functions
+		var sayHelloPt2 = function(){
+			 console.log('Hello World');
+		}
+		sayHelloPt2();*/
+		function clickButton(){
+			console.log('Oww that hurt');
+		}
+
+		function displayName(){
+			var name = document.getElementById('name').value;
+			document.getElementById('display').innerHTML = name;
+		}
+
+
+	</script>
+
+
+
+
+
+
+</body>
+
+</html>

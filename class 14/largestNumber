@@ -9,6 +9,12 @@
 		<h1 id="text"></h1>
 
 		<script type="text/javascript">
+
+			//create variables for the 3 numbers
+			//if x is larger than x2 and x3 than it is larger
+			//if x2 is larger than x1 and x3 than it is larger
+			//if x3 is larger than x 2 or x1
+
 			
 			var x1 = parseInt(prompt('Enter a number:'));
 			var x2 = parseInt(prompt('Enter a 2nd number:'));
