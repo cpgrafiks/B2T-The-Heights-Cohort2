@@ -6,32 +6,35 @@
 			th{
 				height: 200px;
 				width: 200px;
+				font-size: 100px;
+				font-family: futura;
+				color: white;
+				background-color: pink;
+				border-color: pink;
 			}
 		</style>
+
 	</head>
 
 	<body>
 		
-		<table border="5">
+		<table>
 			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
+				<th id="sq0" onclick="clickSq(this)"></th>
+				<th id="sq1" onclick="clickSq(this)"></th>
+				<th id="sq2" onclick="clickSq(this)"></th>
 			</tr>
 			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
+				<th id="sq3" onclick="clickSq(this)"></th>
+				<th id="sq4" onclick="clickSq(this)"></th>
+				<th id="sq5" onclick="clickSq(this)"></th>
 			</tr>
 			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
+				<th id="sq6" onclick="clickSq(this)"></th>
+				<th id="sq7" onclick="clickSq(this)"></th>
+				<th id="sq8" onclick="clickSq(this)"></th>
 			</tr>
 		</table>
-
-
-
 
 
 		<script type="text/javascript">
@@ -47,8 +50,52 @@
 			8. click grid, display symbol; disable grid square from being clicked
 			9. switch turn to other player
 			10. make check for horizontal, veritcal, diagonal, win
+				a. does top row contain same symbol 0,1,2
+				b. does middle row contain same symbol 3,4,5
+				c. does last row contain same symbol 6,7,8
+				d. does 1st col contain same symbol
+				e. does 2nd col contain same symbol
+				f. does 3rd col contain same symbol
+				g. does left diagonal contain same symbol
+				h. does rigght diagonal contain same symbol
 			11. make check for filled grid
 			*/
+
+
+				var board = [
+					'', '', '',
+					'', '', '',
+					'', '', ''
+
+				]
+				var player = 'X';
+				function clickSq(square){
+					if(square.innerHTML == ''){
+						square.innerHTML = player;
+					
+						//get last char of element's id
+						var i = square.id.charAt(square.id.length-1);
+						board[i] = player;
+
+						//changes value of player depending on its value
+						player = (player == 'X') ? 'O' : 'X';
+
+						console.log(board);
+						evalBoard();
+					}
+				}
+				function evalBoard(){
+					if(board[0] != '' && board[0] == board[1] && board[0] == board[2]){
+						console.log('Winner is ' + board[0]);
+					}
+					else if(board[3] != '' && board[3] == board[4] && board[3] == board[5]){
+						console.log('Winner is ' + board[3]);
+					}
+					else if(board[6] != '' && board[6] == board[7] && board[6] == board[8]){
+						console.log('Winner is ' + board[6]);
+					}
+				}
+
 
 		</script>
 	</body>
