@@ -2,18 +2,25 @@
 <html>
 <head>
 	<title>Black Jack</title>
+	<style type="text/css">
+		h4{
+			font-family: garamond;
+		}
+	</style>
 </head>
 
 <body>
 
-<h4>Dealer:</h4>
-<h4>Your Hand:</h4>
+<h4>Dealer: </h4><h4 id="p1txt"></h4>
+<h4>You: </h4><h4 id="p2txt"></h4>
 
 <input type="button" value="Start" onclick="start()">
 	<input type="button" value="Hit" onclick="hit()">
 	<input type="button" value="Stay" onclick="stay()">
-	<h4 id="bet">Bet</h4>
-	<input id="bet" type="text" onchange="bet()"> 
+	<h4 id="bet">Bet
+	<input id="bet" type="text" onchange="bet()"></h4>
+
+	
 
 <script type="text/javascript">
 /*
@@ -31,10 +38,20 @@ instructions:
 */
 
 
-var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K']
-function start(){
-	console.log('test start')
+var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+var i = [0];
+var p1 = parseInt(Math.random()*13);
+var p2 = parseInt(Math.random()*13);
+function twoRandomScores(){
+	score1.sum(i <=13);
+	score2.sum(i <=13);
 };
+
+function start(){
+	var p1 = document.getElementById('p1txt').innerHTML = cards;
+		var p2 = document.getElementById('p2txt').innerHTML = cards;
+	console.log('test start')
+}
 function hit(){
 	console.log('test')
 };
