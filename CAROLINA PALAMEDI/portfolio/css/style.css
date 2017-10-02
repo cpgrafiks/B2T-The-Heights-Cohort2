@@ -1,0 +1,39 @@
+header { background-color: black;
+		 margin: 0 auto;
+		 padding: 20px; 
+}
+
+
+ul { list-style-type: none;
+     font-family: "verdana", sans-serif;
+     font-variant: small-caps;
+     text-align: center;
+     font-kerning: : 25%;
+}
+
+li { display: inline;
+	 padding: 15px;	
+}
+
+a { text-decoration: none;
+	text-align: center;
+	color: white;
+}
+
+a:hover { text-decoration: underline;
+}
+
+.footer { background-color: black;
+		  position: absolute;
+		  bottom: 0;
+		  right: 0;
+		  left:0;
+		  padding: 15px;
+}
+
+.footerText { text-align: right;
+	         
+}
+
+
+
