@@ -13,11 +13,10 @@
 
 <h4>Dealer: </h4><h4 id="p1txt"></h4>
 <h4>You: </h4><h4 id="p2txt"></h4>
-
 <input type="button" value="Start" onclick="start()">
-	<input type="button" value="Hit" onclick="hit()">
-	<input type="button" value="Stay" onclick="stay()"> 
-	<h4 id="bet">Bet<input id="bet" type="text" onchange="bet()"></h4>
+<input type="button" value="Hit" onclick="hit()">
+<input type="button" value="Stay" onclick="stay()"> 
+<h4 id="bet">Bet<input id="bet" type="text" onchange="bet()"></h4>
 
 	
 
@@ -37,19 +36,34 @@ instructions:
 */
 
 //var a = 17; var b = 21; var dealerhand = function (a, b){}
-
+// dealerHand
+//playerHand
 
 
 	var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
-	var i = [0];
-	var p1 = parseInt(Math.random()*13);
-	var p2 = parseInt(Math.random()*13);
+	//var i = [0];
+	var card1 = parseInt(Math.random()*13);
+	var card2 = parseInt(Math.random()*13);
+	var card3 = parseInt(Math.random()*13);
+	var card4 = parseInt(Math.random()*13);
+	//call from deck1 2 cards
+	var randomDeck = cards[card1 + card2];
+	//call from deck2 2 cards
+	var randomDeck1 = cards[card3 + card4];
+	console.log(randomDeck + "," + randomDeck1)
+
+	/*var dealerhand = function(card1, card2){
+		;
+	}
+	var playerHand = function(card3, card4){
+
+	};*/
 
 
 	function start(){
-		var p1 = document.getElementById('p1txt').innerHTML =  cards;
-		var p2 = document.getElementById('p2txt').innerHTML = p2 + cards;
-		console.log(p1 + p2)
+		var dealerhand = document.getElementById('p1txt').innerHTML = randomDeck + ", " + randomDeck1;
+		var playerHand = document.getElementById('p2txt').innerHTML = randomDeck + ", " + randomDeck1;
+		console.log(dealerHand + playerHand)
 	};
 	function hit(){
 		console.log('hit')
@@ -66,7 +80,7 @@ instructions:
 /*
 var randomRating = Math.random()
 
-function twoRandomScores (){
+function twoRandomScores (cards){
 	score1.sum(i <=10);
 	score2.sum(i <=10);
 }

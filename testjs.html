@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head><title>test javascript</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var cards = ["A", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
+		function shuffle(cards) {
+  		var currentIndex = cards.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = cards[currentIndex];
+    cards[currentIndex] = cards[randomIndex];
+    cards[randomIndex] = temporaryValue;
+  }
+
+  return cards;
+}
+shuffle(cards)
+for (var i = 0; i < cards.length; i++) {
+    if (cards[i] == cards <= 21) {
+        func1();
+    }
+    else if (cards[i] == 21) {
+        func2();
+    }
+    else if (cards[i] == > 21) {
+        func3();
+    }
+}
+
+
+
+	</script>
+
+</body>
+</html>
