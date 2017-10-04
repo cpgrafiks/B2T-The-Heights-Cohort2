@@ -16,17 +16,16 @@
 
 <input type="button" value="Start" onclick="start()">
 	<input type="button" value="Hit" onclick="hit()">
-	<input type="button" value="Stay" onclick="stay()">
-	<h4 id="bet">Bet
-	<input id="bet" type="text" onchange="bet()"></h4>
+	<input type="button" value="Stay" onclick="stay()"> 
+	<h4 id="bet">Bet<input id="bet" type="text" onchange="bet()"></h4>
 
 	
 
 <script type="text/javascript">
 /*
 instructions:
--player 1 has to hit card 2x to equal 21
--2nd player has to hit card 2x to equal 21
+-player 2 has to click start and both p1 and p2 display 2 cards
+-if cards are not 21 has option to hit or stay
 -each player has to take turns
 -cards are 1-king, values 1-10
 - ace equals 1 or 11
@@ -37,27 +36,30 @@ instructions:
 -make a bet button, increments of 5
 */
 
-
-var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
-var i = [0];
-var p1 = parseInt(Math.random()*13);
-var p2 = parseInt(Math.random()*13);
+//var a = 17; var b = 21; var dealerhand = function (a, b){}
 
 
-function start(){
-	var p1 = document.getElementById('p1txt').innerHTML = cards;
-		var p2 = document.getElementById('p2txt').innerHTML = cards;
-	console.log('test start')
-}
-function hit(){
-	console.log('test')
-};
-function stay(){
-	console.log('test')
-};
-function bet(){
-	console.log('bet')
-};
+
+	var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+	var i = [0];
+	var p1 = parseInt(Math.random()*13);
+	var p2 = parseInt(Math.random()*13);
+
+
+	function start(){
+		var p1 = document.getElementById('p1txt').innerHTML =  cards;
+		var p2 = document.getElementById('p2txt').innerHTML = p2 + cards;
+		console.log(p1 + p2)
+	};
+	function hit(){
+		console.log('hit')
+	};
+	function stay(){
+		console.log('stay')
+	};
+	function bet(){
+		console.log('bet')
+	};
 
 
 
