@@ -41,15 +41,12 @@ instructions:
 
 
 	var cards = ['A', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
-	//var i = [0];
+	var i = [0];
 	var card1 = parseInt(Math.random()*13);
 	var card2 = parseInt(Math.random()*13);
-	var card3 = parseInt(Math.random()*13);
-	var card4 = parseInt(Math.random()*13);
 	//call from deck1 2 cards
-	var randomDeck = cards[card1 + card2];
-	//call from deck2 2 cards
-	var randomDeck1 = cards[card3 + card4];
+	var randomDeck = cards[card1 & card2];
+	var randomDeck1 = cards[card1 & card1];
 	console.log(randomDeck + "," + randomDeck1)
 
 	/*var dealerhand = function(card1, card2){
@@ -63,7 +60,8 @@ instructions:
 	function start(){
 		var dealerhand = document.getElementById('p1txt').innerHTML = randomDeck + ", " + randomDeck1;
 		var playerHand = document.getElementById('p2txt').innerHTML = randomDeck + ", " + randomDeck1;
-		console.log(dealerHand + playerHand)
+
+
 	};
 	function hit(){
 		console.log('hit')
