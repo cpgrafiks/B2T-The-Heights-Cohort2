@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get the day of the Week</title>
+        <meta charset="utf-8"/>
+        <style type="text/css">
+           h1 {
+                font-family: Garamond;
+                font-variant-caps: small-caps;
+                color: purple;
+                text-shadow: .5px 1.5px #2a1a42;
+           }
+        </style>
+    </head>
+
+    <body>
+
+        <h1 id="text"></h1>
+        <script type="text/javascript">
+            //start switch with date and day then have it display with the cases depending when you check for it to show the day of the week
+
+        switch(new Date().getDay()) {
+            case 0:
+                day = 'Sunday';
+                console.log('Today is Sunday');
+                document.getElementById('text').innerHTML = 'Today is Sunday';
+                break;
+            case 1:
+                day = 'Monday';
+                console.log('Today is Monday')
+                document.getElementById('text').innerHTML = 'Today is Monday';
+            case 2:
+                day = 'Tuesday';
+                console.log('Today is Tuesday');
+                document.getElementById('text').innerHTML = 'Today is Tuesday';
+                break;
+            case 3:
+                day = 'Wednesday';
+                console.log('Today is Wednesday');
+                document.getElementById('text').innerHTML = 'Today is Wednesday';
+                break;
+            case 4:
+                day = 'Thursday';
+                console.log('Today is Thursday');
+                document.getElementById('text').innerHTML = 'Today is Thursday';
+                break;
+            case 5:
+                day = 'Friday';
+                console.log('Today is Friday');
+                document.getElementById('text').innerHTML = 'Today is Friday';
+                break;
+            case 6:
+                day = 'Saturday';
+                console.log('Today is Saturday');
+                document.getElementById('text').innerHTML = 'Today is Saturday';
+                break;
+        }
+</script>
+</body>
+</html>
