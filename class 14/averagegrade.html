@@ -18,26 +18,27 @@
 		*/
 
 		var grade = [80, 77, 88, 95, 68]
-		
-		if(age >= 18){
-				console.log('You are an adult');
-				document.getElementById('text').innerHTML = 'You are an adult';
-				document.getElementById('photo').src = 'https://thumbs.dreamstime.com/z/portrait-beautiful-adult-happy-woman-thu-thumbs-up-sign-over-white-background-34852652.jpg';
-			}
-			else if(age > 12 && age < 18){ 
-				console.log('Not yet buddy');
-				document.getElementById('text').innerHTML = 'Not yet buddy';
-				document.getElementById('photo').src = 'https://i.ytimg.com/vi/nwngkY8xbs0/maxresdefault.jpg';
-			}
-			else if(age >= 10 && age <= 12){
-				console.log('You are a PRE teen');
-				document.getElementById('text').innerHTML = 'You are a PRE teen';
-				document.getElementById('photo').src = 'http://confessionsofanadoptiveparent.com/wp-content/uploads/2012/10/iStock_000019232503_Medium.jpg';
-			}
-			else{
-				console.log('Go home, you are still a baby!');
-				document.getElementById('text').innerHTML = 'Go home, you are still a baby!';
-				document.getElementById('photo').src = 'https://nameberry.com/blog/wp-content/uploads/2016/10/shutterstock_464300804-776x600.jpg';
+		var sum = 0;
+		for(var i = 0; i < grade.length; i++) {
+		sum += grade[i];
+		}
+		var avg = sum / grade.length;
+
+		if(avg < 60){
+			console.log('The average grade for the class is F');
+		}
+		else if(avg < 70){
+			console.log('The average grade for the class is D');
+		}
+		else if(avg < 80){
+			console.log('The average grade for the class is C');
+		}
+		else if (avg < 90){
+			console.log('The average grade for the class is B');
+		}
+		else{
+			console.log('The average grade for the class is A');
+		}
 
 	</script>
 
