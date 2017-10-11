@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>Class 16: Loops</title>
+	<title>Even/Odd Numbers</title>
 </head>
 
 <body>
+
+
+
 	<script type="text/javascript">
-	/*var input = prompt();
-	
-	if(input < 13){
-		console.log('Woohoo');
-	}
-	else{
-		console.log('Boohoo');
-	}*/
+	/*
+	1. display 0-15
+	2. if number is even display even
+	3. if number is odd display odd
+	*/
 
-	/*if(input % 2 == 0){
-		console.log(input + " is even");
-	}
-	else{
-		console.log(inpput + " is odd");
-	}*/
-
-	/*var i = 1;
-	while(i <= 5){
-    	console.log(i);
-    	//i = 1 + 1;
-    	i++;
-
-    	//i = i + 2 or i += 2 -> incrementing numbers greater than 1
-	}
-
-	var j = 100
-	while(j >= -20){
-		console.log(j);
-		j-=3;
-	}*/
-
-	var m = 0
-	while(m <= 99){
-		if(m % 3 == 0){
-			console.log(m);
+	var i = 0;
+	while(i <=15){
+		if(i & 1){
+			console.log(i + ' is an odd number.');
+			document.write(i + ' is an odd number.' + "<br>");
 		}
-		m++;
+		else{
+			console.log(i + ' is an even number.');
+		document.write(i + ' is an even number.' + "<br>");
+		}
+		i++;
 	}
 
 
