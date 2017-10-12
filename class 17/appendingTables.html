@@ -27,14 +27,15 @@
 
 	<script type="text/javascript">
 
-		function insertRow(){
+		function insertRow(cell1, cell2){
 			var table = document.getElementById('myTable');
 			var row = table.insertRow(table.rows.length);
-			var cell1 = row.insertCell(0);
-			var cell2 = row.insertCell(1);
+			var cell1 = row.insertCell(0).value;
+			var cell2 = row.insertCell(1).value;
 			var index = 1;
 			index++;
-					
+		document.getElementById("col1").innerHTML = cell1;
+		document.getElementById("col2").innerHTML = cell2;
 		}
    	
 
