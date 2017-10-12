@@ -6,6 +6,7 @@
 
 <body>
 <p id="display"></p>
+<!--set up form-->
 <form>
 	First Name: <input type="text" id="fname" value=""><br>
 	Last Name: <input type="text" id="lname" value=""><br>
@@ -13,6 +14,8 @@
 </form>
 	
 <script type="text/javascript">
+
+	//set form to display first and last name
 	function getFormvalue(){
 		document.getElementById('display').innerHTML = 'Hello ' + document.getElementById('fname').value + ' ' + document.getElementById("lname").value;
 	}
