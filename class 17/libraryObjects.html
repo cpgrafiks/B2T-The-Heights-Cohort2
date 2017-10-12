@@ -6,10 +6,32 @@
 
 <body>
 
+        <h1 id="display"></h1>
+
+        <script type="text/javascript">
+            /*
+            set up library array and then if/else statement to display on page
+            */
+            var library = [
+                { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+                { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+                { author: 'Suzanna Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
+            ];
+           
+            for(var i in library){
+                if(library[i].readingStatus == true){
+                    document.getElementById('display').innerHTML += ('I already read ' + library[i].title + ' by ' + library[i].author + '<br/>');
+                }
+                else{
+                    document.getElementById('display').innerHTML += ('I still need to read ' + library[i].title + ' by ' + library[i].author + '<br/>');
+                }
+            }
+        </script>
+
+    </body>
+</html>
 
 
-
-<script type="text/javascript">
 
 
 

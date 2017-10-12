@@ -18,14 +18,18 @@
 		</tr>
 	</table><br>
 
+	<form>
 	Column 1 <input type="text" id="col1" value="Curtis"><br>
-	Column 2 <input type="text" id="col2" value="Jackson"><br>
+	Column 2 <input type="text" id="col2" value="Jackson">
+	</form><br>
+
 	<input type="button" onclick="insertRow()" value="Insert row">
 
 
-</table>
+
 
 	<script type="text/javascript">
+		/*set up table. add a row and 2 columns. set up code to add input into the columns, adding a new row.*/
 
 		function insertRow(cell1, cell2){
 			var table = document.getElementById('myTable');
@@ -34,8 +38,8 @@
 			var cell2 = row.insertCell(1).value;
 			var index = 1;
 			index++;
-		document.getElementById("col1").innerHTML = cell1;
-		document.getElementById("col2").innerHTML = cell2;
+		cell1 = document.getElementById("col1").value
+		cell2 = document.getElementById("col2").value
 		}
    	
 
