@@ -15,11 +15,13 @@
 	var o = ['th', 'st', 'nd', 'rd'];
 
 	for(var i = 0; i < colors.length; i++){
-		if(o[1] + colors){
-		console.log([i + 1] + o[i + 1] +' choice is the color ' + colors[i]);
+		if(i < 3){
+			var suffix = o[i + 1];
+			console.log((i + 1 + suffix + ' choice is the color ') + colors[i]);
 		}
 		else{
-		console.log([i + 1] + o[i] +' choice is the color ' + colors[i]);
+			var suffix = o[0];
+		console.log((i + 1 + suffix + ' choice is the color ') + colors[i]);
 		}
 	}
 
